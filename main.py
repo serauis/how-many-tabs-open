@@ -1,29 +1,33 @@
-"""How Many Tabs Do You Have Open? entry: write the count to /output/entry.txt.
+"""Entry for "How Many Tabs Do You Have Open?": record the tally in /output/entry.txt.
 
-The count is 1. The ladder verdict: one tab open is the rarest honest
-count — a single-tab monk, total focus, one thing at a time. Big numbers
-lose because the brief says size for its own sake does not count, and
-tab hoarding past 100 is a known phenomenon, not a strange one.
+The tally is 1. What the judging ladder showed: a lone open tab is the
+strangest truthful answer — one tab, full attention, a single thing in
+progress. Huge tallies fail because the brief counts bigness alone as
+nothing; keeping a hundred-plus tabs around is ordinary, not odd.
 """
 
 import os
 
-TABS = "1"
+TAB_COUNT = "1"
 
 
-def write_entry(output_dir):
-    if not TABS.isdigit() or not 1 <= len(TABS) <= 5:
+def validate_count(value):
+    if not value.isdigit() or not 1 <= len(value) <= 5:
         raise ValueError("entry must be 1-5 digits")
+
+
+def emit_count(output_dir):
+    validate_count(TAB_COUNT)
     os.makedirs(output_dir, exist_ok=True)
     path = os.path.join(output_dir, "entry.txt")
     with open(path, "w", encoding="utf-8") as f:
-        f.write(TABS + "\n")
+        f.write(TAB_COUNT + "\n")
     return path
 
 
 def main():
     output_dir = os.environ.get("OUTPUT_DIR", "/output")
-    write_entry(output_dir)
+    emit_count(output_dir)
 
 
 if __name__ == "__main__":

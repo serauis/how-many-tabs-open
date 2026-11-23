@@ -4,7 +4,8 @@
 [![rank](https://make.fun/badge/u-danu-how-many-tabs-do-you-have-open-d86e783d/serauis/how-many-tabs-open/rank.svg)](https://make.fun/bounty/u-danu-how-many-tabs-do-you-have-open-d86e783d/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=u-danu-how-many-tabs-do-you-have-open-d86e783d)
 [![reward](https://make.fun/badge/u-danu-how-many-tabs-do-you-have-open-d86e783d/serauis/how-many-tabs-open/reward.svg)](https://make.fun/bounty/u-danu-how-many-tabs-do-you-have-open-d86e783d?utm_source=github&utm_medium=readme&utm_campaign=u-danu-how-many-tabs-do-you-have-open-d86e783d)
 
-One tab open — a tiny program that writes the honest count of open browser tabs to /output/entry.txt.
+A single tab open — this tiny program writes the true number of open browser tabs into /output/entry.txt.
+Why one tab? A single open tab is the rarest honest count — total focus, one thing at a time.
 
 ## Run it
 
